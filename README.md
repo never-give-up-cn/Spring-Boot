@@ -20,4 +20,6 @@
 - git remote add origin git@github.com:never-give-up-cn/comments.git
 - git push -u origin master
 ##注
-- 提交前要执行git add .
+- 提交前要执行 git add .
+- git commit -m "first commit"
+- git push -u origin master
