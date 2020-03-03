@@ -19,7 +19,7 @@
 ### …or push an existing repository from the command line
 - git remote add origin git@github.com:never-give-up-cn/comments.git
 - git push -u origin master
-##注
+# 注
 - 提交前要执行 git add .
 - git commit -m "first commit"
 - git push -u origin master
