@@ -20,7 +20,7 @@
 - git remote add origin git@github.com:never-give-up-cn/comments.git
 - git push -u origin master
 
-#准备使用的框架
+# 准备使用的框架
 - https://v3.bootcss.com/components/ 
 # 注
 - 提交前要执行 git add .
