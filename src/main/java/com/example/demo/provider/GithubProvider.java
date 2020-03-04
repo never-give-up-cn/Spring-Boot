@@ -1,5 +1,9 @@
 package com.example.demo.provider;
 
+import cn.hutool.Hutool;
+import cn.hutool.core.lang.Console;
+import cn.hutool.http.Header;
+import cn.hutool.http.HttpRequest;
 import com.alibaba.fastjson.JSON;
 import com.example.demo.dto.AccessTokenDTO;
 import okhttp3.*;
@@ -32,6 +36,10 @@ public class GithubProvider {
         return null;
     }
 
+
+
+
+
     public GithubUser getUser(String accessToken) {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
@@ -41,8 +49,10 @@ public class GithubProvider {
             Response response = client.newCall(request).execute();
             String string = response.body().string();
             GithubUser githubUser = JSON.parseObject(string, GithubUser.class);
+            System.out.println("dddddddddddddddd"+githubUser);
             return githubUser;
         } catch (IOException e) {
+            System.out.println("---------------------------IOException");
             e.printStackTrace();
         }
         return null;
