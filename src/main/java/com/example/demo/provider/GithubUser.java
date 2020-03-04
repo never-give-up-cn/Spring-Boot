@@ -2,7 +2,8 @@ package com.example.demo.provider;
 
 public class GithubUser {
     private String name;
-
+    private Long id;
+    private String bio;
     public String getName() {
         return name;
     }
@@ -26,10 +27,6 @@ public class GithubUser {
     public void setBio(String bio) {
         this.bio = bio;
     }
-
-    private Long id;
-    private String bio;
-
 
 
 }

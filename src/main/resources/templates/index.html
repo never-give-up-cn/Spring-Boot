@@ -47,24 +47,24 @@
             </ul>
             <form class="navbar-form navbar-left">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" placeholder="搜索问题">
                 </div>
                 <button type="搜索问题" class="btn btn-default">搜索问题</button>
             </form>
+
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="https://github.com/login/oauth/authorize?client_id=346a2047d249ad02e3c2&redirect_uri=http://192.168.1.103/callback&scope=user&state=1">登录</a>
-                </li>
-                <li class="dropdown">
+                <li class="dropdown" th="${session.user != null}">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">我<span class="caret"></span></a>
+                       aria-expanded="false" th:text="${session.user}"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">消息</a></li>
                         <li><a href="#">个人资料</a></li>
                         <li><a href="#">消息中心</a></li>
-                        <li role="separator" class="divider"></li>
                         <li><a href="#">退出登录</a></li>
                     </ul>
+                </li>
+                <li th:if="${session.user==null}">
+                    <a href="https://github.com/login/oauth/authorize?client_id=346a2047d249ad02e3c2&redirect_uri=http://localhost/callback&scope=user&state=1">登录</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
